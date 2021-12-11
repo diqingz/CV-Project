@@ -72,12 +72,12 @@ while capture.isOpened():
                 paths.append(image)
 
                 dist = torch.cdist(img_embedding, img2_embedding, 1)
-                print(dist)
+               # print(dist)
         closest_path = paths[torch.argmin(torch.tensor(data))]
         print(closest_path)
         val = torch.tensor([dist])
         num = val.item()
-        print(num)
+        # print(num)
         if (dist < 900):
             num = input("Enter your password: ")  # Taking input from user
             print(write_read(num))  # printing the value
